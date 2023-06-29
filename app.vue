@@ -3,7 +3,7 @@
 </template>
 
 <style>
-html {
+body {
   margin: 0;
   background-image: url("~/assets/img/wallpaper.png");
   background-repeat: repeat;
