@@ -6,7 +6,7 @@
 html {
   margin: 0;
   background-image: url("~/assets/img/wallpaper.png");
-  background-repeat: repeat-y;
+  background-repeat: repeat;
 }
 </style>
 <script setup lang="ts">
