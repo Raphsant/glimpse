@@ -15,10 +15,10 @@ watchEffect(() => {
 })
 
 </script>
-<template>
-  <div class="flex flex-col items-center justify-center ">
+<template >
+  <div class="flex flex-col h-screen overflow-y-auto">
     <IntroHeader/>
-    <div class="flex flex-col font-nunito justify-center items-center md:grid md:grid-cols-2  w-full md:w-1/2">
+    <div class="flex flex-col font-nunito justify-center items-center md:grid md:grid-cols-2 w-full md:w-1/2 ">
       <ClockCard/>
       <WeatherCard/>
       <TodoCard/>

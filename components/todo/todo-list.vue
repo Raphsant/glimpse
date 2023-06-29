@@ -77,9 +77,9 @@ onUnmounted(() => {
         </div>
       </li>
     </ul>
-    <button class="place-self-end" @click="$emit('toggleForm')">
+    <button class="place-self-end mt-15" @click="$emit('toggleForm')">
       <Icon name="material-symbols:add"
-            class="shadow-lg bg-white/10 hover:bg-black/10 backdrop-filter backdrop-blur-3xl rounded-3xl bg-clip-padding place-self-end p-1"
+            class="shadow-lg bg-white/10 hover:bg-black/10 backdrop-filter backdrop-blur-3xl rounded-3xl bg-clip-padding place-self-end p-1 "
             size="3rem"/>
     </button>
   </div>
