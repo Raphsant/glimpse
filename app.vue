@@ -6,7 +6,7 @@
 body {
   margin: 0;
   background-image: url("~/assets/img/wallpaper.png");
-  background-repeat: repeat;
+  background-attachment: fixed
 }
 </style>
 <script setup lang="ts">
