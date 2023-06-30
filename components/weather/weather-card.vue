@@ -3,10 +3,19 @@ const temperature = ref(0)
 const description = ref("Loading...")
 const city = ref("")
 const config = useRuntimeConfig()
-console.log(config)
+const user = useSupabaseUser();
+const userCity = user.value?.user_metadata.city
+let lat;
+let lon;
 const getWeather = async () => {
-    const url = `https://api.openweathermap.org/data/2.5/weather?lat=41.878113&lon=-87.629799&appid=${config.public.owaKey}`
     try {
+
+        const geoLocator = await useFetch(`http://api.openweathermap.org/geo/1.0/direct?q=${userCity}&limit=1&appid=${config.public.owaKey}`)
+        if (!geoLocator)
+          return;
+        lat = geoLocator.data.value[0].lat
+        lon = geoLocator.data.value[0].lon
+        const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${config.public.owaKey}`
         const weatherData = await useFetch(url);
         temperature.value = Math.round(weatherData.data.value.main.temp)
         description.value = weatherData.data.value.weather[0].description
