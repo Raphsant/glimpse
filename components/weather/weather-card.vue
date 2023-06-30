@@ -21,11 +21,11 @@ onMounted(getWeather)
 </script>
 
 <template>
-    <div class="flex-col flex justify-center items-center w-4/5 md:w-3/4 h-full my-2 bg-gradient-to-tl from-white/10 to-pink-400/10 rounded-lg bg-clip-padding backdrop-filter backdrop-blur-lg">
-        <div class="flex-col flex justify-between items-center py-5 my-10 text-white gap-5 w-fit p-10 rounded-md  h-full">
-            <div class="text-4xl font-light ">{{ city }}</div>
-            <div class="text-5xl">{{ temperature }}°</div>
-            <div class="font-extralight">{{ description }}</div>
+    <div class="flex-col flex justify-center items-center w-4/5 md:w-3/4 h-fit my-2 bg-gradient-to-tl from-white/10 to-pink-400/10 rounded-lg bg-clip-padding backdrop-filter backdrop-blur-lg">
+        <div class="flex-col flex justify-center items-center my-2 text-white w-fit rounded-md">
+            <div class="text-xl font-extralight ">{{ city }}</div>
+            <div class="text-3xl">{{ temperature }}°</div>
+            <div class="font-extralight text-xl">{{ description }}</div>
         </div>
     </div>
 
