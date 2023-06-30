@@ -10,7 +10,7 @@ let lon;
 const getWeather = async () => {
     try {
 
-        const geoLocator = await useFetch(`http://api.openweathermap.org/geo/1.0/direct?q=${userCity}&limit=1&appid=${config.public.owaKey}`)
+        const geoLocator = await useFetch(`https://api.openweathermap.org/geo/1.0/direct?q=${userCity}&limit=1&appid=${config.public.owaKey}`)
         if (!geoLocator)
           return;
         lat = geoLocator.data.value[0].lat
