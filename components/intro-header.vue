@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const {greeting} = useTimeGreeting();
 const user = useSupabaseUser();
-const username = user.value?.user_metadata.full_name
+const username = user.value?.user_metadata.name
 
 
 </script>

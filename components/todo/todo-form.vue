@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup lang="js">
 
 const client = useSupabaseClient()
 const user = useSupabaseUser()
@@ -8,7 +8,7 @@ async function addTask() {
   event.preventDefault();
   const {data} = await client.from('todos')
       .upsert({
-        author_id: user.value.id,
+        user_id: user.value.id,
         title: todoTitle.value,
         description: todoDescription.value,
         completed: false

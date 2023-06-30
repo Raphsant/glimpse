@@ -16,7 +16,7 @@ const loadTodos = async () => {
     //fetching elements from 'todoTable'
     const {data: todo, refresh: loadTodos} = await useAsyncData('todo', async () => {
       //specify that we only need the rows that match our user ID
-      const {data} = await client.from('todos').select().eq('author_id', user.value.id)
+      const {data} = await client.from('todos').select().eq('user_id', user.value.id)
       //assign the value of the rows to the todoList
       todoList.value = data.filter(todo => todo.completed === false);
       completedList.value = data.filter(todo => todo.completed === true);
