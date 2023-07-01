@@ -51,16 +51,16 @@ onUnmounted(() => {
 
 <template>
   <div class="flex flex-col justify-start items-start w-full h-full">
-    <div class="flex flex-row w-full h-1/2 items-center justify-center my-1 shadow-lg  rounded-lg font-light text-lg">
+    <div class="cursor-pointer flex flex-row w-full h-1/2 items-center justify-center my-1 shadow-lg  rounded-lg font-light text-lg">
       <div @click="isTodo = !isTodo" :class="{'bg-white/20 h-full w-full rounded-l-lg text-center p-2 shadow-lg shadow-black/20': isTodo,'bg-black/30 h-full w-full rounded-l-lg text-center backdrop-blur-lg p-2 shadow-inner shadow-black/30': !isTodo}">To-do</div>
       <div @click="isTodo = !isTodo" :class="{'bg-white/20 h-full w-full rounded-r-lg text-center p-2 shadow-lg shadow-black/20': !isTodo,'bg-black/30 h-full w-full rounded-r-lg text-center backdrop-blur-lg p-2 shadow-inner shadow-black/30': isTodo}">Completed</div>
     </div>
     <ul class="" v-if="isTodo">
-      <li class="my-2 flex flex-col justify-start items-start text-left  "  v-for="todo in todoList">
+      <li class="cursor-pointer  my-2 flex flex-col justify-start items-start text-left  "  v-for="todo in todoList">
         <div class="w-full h-fit">
           <div @click="completeTodo(todo)">
             <Icon name="bx:checkbox" class="text-pink-300/60 justify-start place-self-start" size="2rem"/>
-            <span class="text-lg">{{ todo.title }}</span>
+            <span class="text-lg hover:underline">{{ todo.title }}</span>
           </div>
         </div>
         <div class="font-light italic text-gray-100/60 text-sm break-words">

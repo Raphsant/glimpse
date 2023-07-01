@@ -23,6 +23,7 @@
     "@capacitor/haptics": "5.0.4",
     "@capacitor/keyboard": "5.0.4",
     "@capacitor/status-bar": "5.0.4",
+    "@ionic/storage": "^4.0.0",
     "@nuxtjs/supabase": "^0.3.7",
     "@nuxtjs/tailwindcss": "^6.7.2",
     "global": "^4.4.0",
